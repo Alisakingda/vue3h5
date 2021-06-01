@@ -8,6 +8,8 @@ import 'normalize.css'
 // 全局样式
 import '@/styles/index.less'
 
+import 'tailwindcss/tailwind.css'
+
 const app = createApp(App)
 
 // 按需注册 vant 组件

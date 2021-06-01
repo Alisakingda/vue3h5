@@ -1,6 +1,7 @@
 'use strict'
 const autoprefixer = require('autoprefixer')
 const pxtoviewport = require('postcss-px-to-viewport')
+const tailwindcss = require('tailwindcss')
 
 const path = require('path')
 function resolve(dir) {
@@ -26,6 +27,7 @@ module.exports = {
     loaderOptions: {
       postcss: {
         plugins: [
+          tailwindcss(),
           autoprefixer(),
           pxtoviewport({
             viewportWidth: 375 // 根据设计稿设定

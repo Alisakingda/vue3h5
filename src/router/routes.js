@@ -9,7 +9,7 @@ const routes = [
     children: [
       {
         path: 'index',
-        name: 'index',
+        name: 'Index',
         component: () => import('@/views/index'),
         meta: {
           title: '首页'
