@@ -11,6 +11,63 @@
       .__spinner-container { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;}
       .__spinner { position: relative; width: 68px; height: 68px; background-color: #41b883; animation: cube-shadow-spinner 1.8s cubic-bezier(0.75, 0, 0.5, 1) infinite;}
       @keyframes cube-shadow-spinner { 50% { border-radius: 50%; transform: scale(0.5) rotate(360deg); } 100% { transform: scale(1) rotate(720deg); } }
+      .spinner {
+        /* margin: 300px auto; */
+        width: 50px;
+        height: 60px;
+        text-align: center;
+        font-size: 10px;
+      }
+
+      .spinner > div {
+        background-color: #41B883;
+        height: 100%;
+        width: 6px;
+        display: inline-block;
+        border-radius: 10px;
+        -webkit-animation: stretchDelay 1.2s infinite ease-in-out;
+        animation: stretchDelay 1.2s infinite ease-in-out;
+      }
+
+      .spinner .rect2 {
+        -webkit-animation-delay: -1.1s;
+        animation-delay: -1.1s;
+      }
+
+      .spinner .rect3 {
+        -webkit-animation-delay: -1.0s;
+        animation-delay: -1.0s;
+      }
+
+      .spinner .rect4 {
+        -webkit-animation-delay: -0.9s;
+        animation-delay: -0.9s;
+      }
+
+      .spinner .rect5 {
+        -webkit-animation-delay: -0.8s;
+        animation-delay: -0.8s;
+      }
+
+      @-webkit-keyframes stretchDelay {
+        0%, 40%, 100% {
+          -webkit-transform: scaleY(0.4)
+        }
+        20% {
+          -webkit-transform: scaleY(1.0)
+        }
+      }
+
+      @keyframes stretchDelay {
+        0%, 40%, 100% {
+          transform: scaleY(0.4);
+          -webkit-transform: scaleY(0.4);
+        }
+        20% {
+          transform: scaleY(1.0);
+          -webkit-transform: scaleY(1.0);
+        }
+      }
     </style>
   </head>
   <body>
@@ -19,8 +76,17 @@
     </noscript>
     <div id="app">
       <div class="__spinner-container">
-        <div class="__spinner"></div>
+        <div class="spinner">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="rect5"></div>
+        </div>
       </div>
+      <!-- <div class="__spinner-container">
+        <div class="__spinner"></div>
+      </div> -->
     </div>
     <!-- built files will be auto injected -->
     <% if (VUE_APP_ENABLE_ERUDA && (VUE_APP_ENABLE_ERUDA === 'true')) { %>

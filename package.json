@@ -1,15 +1,11 @@
 {
   "name": "vue3-h5-template",
-  "homepage": "https://yulimchen.github.io/vue3-h5-template/",
   "version": "0.1.0",
   "license": "MIT",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/yulimchen/vue3-h5-template.git"
+    "type": "git"
   },
-  "bugs": {
-    "url": "https://github.com/yulimchen/vue3-h5-template/issues"
-  },
+  "bugs": {},
   "scripts": {
     "serve": "vue-cli-service serve",
     "dev": "vue-cli-service serve --open",
@@ -76,6 +72,10 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,vue}": ["prettier --write", "eslint --cache --fix", "git add"]
+    "src/**/*.{js,vue}": [
+      "prettier --write",
+      "eslint --cache --fix",
+      "git add"
+    ]
   }
 }

@@ -5,8 +5,16 @@ const routes = [
     path: '/',
     name: 'root',
     component: Layout,
-    redirect: 'Demo',
+    redirect: 'index',
     children: [
+      {
+        path: 'index',
+        name: 'index',
+        component: () => import('@/views/index'),
+        meta: {
+          title: '首页'
+        }
+      },
       {
         path: 'demo',
         name: 'Demo',
