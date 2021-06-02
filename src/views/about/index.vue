@@ -1,6 +1,11 @@
 <template>
   <div>
-    about
+    <div class="w-full h-40">
+      123
+    </div>
+    <div>
+      123
+    </div>
   </div>
 </template>
 

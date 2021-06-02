@@ -5,7 +5,12 @@ import {
   Button,
   Icon,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  NavBar,
+  Tabs,
+  Tab,
+  Swipe,
+  SwipeItem
 } from 'vant'
 
 const componentList = [
@@ -15,12 +20,16 @@ const componentList = [
   Button,
   Icon,
   Tabbar,
-  TabbarItem
+  TabbarItem,
+  NavBar,
+  Tabs,
+  Tab,
+  Swipe,
+  SwipeItem
 ]
 
 export function registerVantComp(app) {
-  componentList.forEach((comp) => {
+  componentList.forEach(comp => {
     app.use(comp)
   })
 }
-

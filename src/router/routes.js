@@ -12,15 +12,8 @@ const routes = [
         name: 'Index',
         component: () => import('@/views/index'),
         meta: {
-          title: '首页'
-        }
-      },
-      {
-        path: 'demo',
-        name: 'Demo',
-        component: () => import('@/views/demo'),
-        meta: {
-          title: '主页'
+          title: '首页',
+          noCache: true
         }
       },
       {

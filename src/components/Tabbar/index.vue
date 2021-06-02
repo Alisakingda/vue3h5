@@ -1,6 +1,6 @@
 <template>
   <van-tabbar
-    v-model="active"
+    v-model="active_tabbar"
     fixed
     :placeholder="true"
     :route="true"
@@ -22,13 +22,13 @@ import { ref, reactive } from 'vue'
 export default {
   name: 'Tabbar',
   setup(props) {
-    const active = ref(0)
+    const active_tabbar = ref(0)
     const tabbarData = reactive([
       {
         icon: 'wap-home-o',
         title: '主页',
         to: {
-          name: 'Demo'
+          name: 'Index'
         }
       },
       {
@@ -47,7 +47,7 @@ export default {
       }
     ])
     return {
-      active,
+      active_tabbar,
       tabbarData
     }
   }

@@ -1,13 +1,16 @@
 <template>
-  <div class="app-wrapper">
-    <div class="app-wrapper__content">
+  <div class="app-wrapper flex flex-col">
+    <div class="w-full h-12">
+      <HeaderBar />
+    </div>
+    <div class="flex-1 overflow-y-scroll">
       <router-view v-slot="{ Component }">
         <keep-alive :include="keepAliveRoutes">
           <component :is="Component" />
         </keep-alive>
       </router-view>
     </div>
-    <div class="app-wrapper__footer">
+    <div class="w-full h-14">
       <tabbar />
     </div>
   </div>
@@ -15,13 +18,15 @@
 
 <script>
 import Tabbar from '@/components/Tabbar'
+import HeaderBar from '@/components/headerBar'
 import { computed } from 'vue'
 import store from '@/store'
 
 export default {
   name: 'Layout',
   components: {
-    Tabbar
+    Tabbar,
+    HeaderBar
   },
   setup() {
     const keepAliveRoutes = computed(() => store.getters.cachedViews)

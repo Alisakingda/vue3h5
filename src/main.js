@@ -10,6 +10,8 @@ import '@/styles/index.less'
 
 import 'tailwindcss/tailwind.css'
 
+// import { BeakerIcon } from '@heroicons/vue/outline'
+
 const app = createApp(App)
 
 // 按需注册 vant 组件
@@ -19,6 +21,9 @@ registerVantComp(app)
 // svg-icon
 import { registerSvgIconComp } from '@/plugins/registerSvgIcon'
 registerSvgIconComp(app)
+
+// https://heroicons.com/
+// app.component('BeakerIcon', BeakerIcon)
 
 app
   .use(router)
